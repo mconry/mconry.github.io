@@ -4,69 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syntonal</title>
+
     <!-- Tailwind CSS v4 Runtime Engine -->
     <script type="module">
         import 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';
     </script>
+
+    <style>
+        /* Optional: subtle signal-noise texture */
+        body {
+            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased font-sans flex flex-col min-h-screen">
+
+<body class="bg-white text-slate-900 antialiased font-sans flex flex-col min-h-screen relative">
+
+    <!-- Geometric Accent (brand blue) -->
+    <div class="absolute top-40 right-0 w-72 h-72 bg-[#163E64]/10 rounded-xl rotate-6 blur-sm pointer-events-none"></div>
 
     <!-- Navigation -->
     <nav class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="font-bold text-xl tracking-tight text-slate-900">SYNTONAL</span>
-            <div class="space-x-6 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#focus" class="hover:text-blue-600 transition">Focus</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-4">
+                <img src="syntonal_20260817_ppt.svg" alt="Syntonal Logo" class="h-10 w-auto">
+                <span class="font-bold text-xl tracking-tight text-[#163E64]">SYNTONAL</span>
+            </div>
+
+            <div class="space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-[#163E64] transition">About</a>
+                <a href="#focus" class="hover:text-[#163E64] transition">Focus</a>
+                <a href="#contact" class="hover:text-[#163E64] transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Main Content Wrapper -->
-    <main class="flex-grow max-w-5xl mx-auto px-6 py-20 w-full space-y-32">
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-24 w-full space-y-32">
 
         <!-- Hero Section -->
         <section id="about" class="max-w-3xl pt-10">
-            <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl text-slate-900 leading-tight">
+            <h1 class="text-6xl font-extrabold tracking-tight leading-[1.05]
+                       bg-gradient-to-r from-[#163E64] to-[#0f2a45]
+                       bg-clip-text text-transparent">
                 Technology. Solutions. Partner.
             </h1>
+
             <p class="mt-6 text-lg text-slate-600 leading-relaxed">
-                Syntonal draws on over three decades of large enterprise experience to provide expert technology consulting for right-sized solutions in your enterprise. 
+                Syntonal provides enterprise-grade technology consulting grounded in three decades of experience
+                designing, governing, and operationalizing complex systems. We deliver right-sized, high-clarity
+                solutions engineered for resilience, velocity, and long-term value.
             </p>
+
+            <!-- Signal Divider -->
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-[#8CCB4A] to-transparent my-12"></div>
         </section>
 
-        <!-- Focus/Capabilities Section -->
-        <section id="focus" class="border-t border-slate-200 pt-16">
-            <h2 class="text-2xl font-bold text-slate-900 mb-10">Core Capabilities</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-slate-800">Cloud Architecture - Azure</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Designing resilient Azure-based systems using practical, cloud-native architectures, cost-aware designs, deployment automation pipelines, and well-governed operational models.</p>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-slate-800">Operational Excellence</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Implementing economical and automated operations paradigms that are designed-in -- not bolted-on -- to systemic solutions.</p>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-slate-800">Cloud Governance</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Assuring systems compliance for Security, Cost, Operational Excellence, Resilenece and Performance via policy-driven insights and automated actions.</p>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-semibold text-slate-800">AI</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Exploiting AI for high-velocity development and implementation, and agentic solutions for rapid response and orchestration.</p>
+        <!-- Focus / Capabilities Section -->
+        <section id="focus" class="pt-10">
+            <div class="border border-slate-200 rounded-2xl bg-white/80 backdrop-blur-sm p-12 shadow-sm">
+
+                <h2 class="text-3xl font-bold text-[#163E64] mb-12 tracking-tight">
+                    Core Capabilities
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                    <!-- Capability -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#8CCB4A]" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 7h18M3 12h18M3 17h18"/>
+                            </svg>
+                            <h3 class="font-semibold text-[#163E64] tracking-tight">
+                                Cloud Architecture — Azure
+                            </h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Designing resilient Azure systems using cloud-native patterns, cost-aware architectures,
+                            automated deployment pipelines, and governed operational models.
+                        </p>
+                    </div>
+
+                    <!-- Capability -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#8CCB4A]" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="9"/>
+                            </svg>
+                            <h3 class="font-semibold text-[#163E64] tracking-tight">
+                                Operational Excellence
+                            </h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Implementing economical, automated operations paradigms designed into systems from the start
+                            — not bolted on after deployment.
+                        </p>
+                    </div>
+
+                    <!-- Capability -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#8CCB4A]" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 6h16v12H4z"/>
+                            </svg>
+                            <h3 class="font-semibold text-[#163E64] tracking-tight">
+                                Cloud Governance
+                            </h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Ensuring compliance across Security, Cost, Operational Excellence, Resilience, and Performance
+                            through policy-driven insights and automated enforcement.
+                        </p>
+                    </div>
+
+                    <!-- Capability -->
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-[#8CCB4A]" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 3v18M3 12h18"/>
+                            </svg>
+                            <h3 class="font-semibold text-[#163E64] tracking-tight">
+                                AI & Agentic Systems
+                            </h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Applying AI for high-velocity development, intelligent orchestration, and agentic automation
+                            that accelerates delivery and elevates operational clarity.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="border-t border-slate-200 pt-16 pb-10">
-            <div class="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <section id="contact" class="pt-10 pb-10">
+            <div class="bg-white border border-slate-200 rounded-2xl p-10 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900">Get in touch.</h2>
-                    <p class="text-slate-600 text-sm mt-1">For inquiries, collaborations, or professional consulting requests.</p>
+                    <h2 class="text-3xl font-bold text-[#163E64] tracking-tight">Get in touch.</h2>
+                    <p class="text-slate-600 text-sm mt-2">
+                        For inquiries, collaborations, or enterprise consulting engagements.
+                    </p>
                 </div>
-                <a href="mailto:contact@syntonal.com" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-slate-900 hover:bg-slate-800 transition shadow-sm">
+
+                <a href="mailto:contact@syntonal.com"
+                   class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+                          bg-[#163E64] text-white font-medium tracking-tight
+                          shadow-md hover:bg-[#0f2a45] hover:shadow-lg
+                          hover:scale-[1.015] transition">
                     contact@syntonal.com
                 </a>
             </div>
@@ -75,8 +164,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 text-slate-400 text-xs py-8">
-        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+    <footer class="bg-white border-t border-slate-200 text-slate-400 text-xs py-8 relative">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-[#163E64]"></div>
+
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
             <span>&copy; 2026 Syntonal LLC. All rights reserved.</span>
             <span>Built via GitHub Pages</span>
         </div>
