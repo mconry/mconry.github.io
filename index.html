@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntonal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-tight text-brand-dark">SYNTONAL</span>
+            <div class="space-x-6 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-accent transition">About</a>
+                <a href="#focus" class="hover:text-brand-accent transition">Focus</a>
+                <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-20 w-full space-y-32">
+
+        <!-- Hero Section -->
+        <section id="about" class="max-w-3xl pt-10">
+            <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl text-slate-900 leading-tight">
+                Building refined digital structures.
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                Welcome to Syntonal. This space serves as a professional node and a rudimentary web presence. Focused on engineering clean interfaces, robust infrastructure architecture, and intentional code design.
+            </p>
+        </section>
+
+        <!-- Focus/Capabilities Section -->
+        <section id="focus" class="border-t border-slate-200 pt-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-10">Core Capabilities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-2">
+                    <h3 class="font-semibold text-slate-800">System Architecture</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Designing resilient systems using decoupled architectures, automation pipelines, and robust deployment frameworks.</p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-semibold text-slate-800">Interface Implementation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Crafting clean, accessible, and responsive user experiences using modern development standards and layouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="border-t border-slate-200 pt-16 pb-10">
+            <div class="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Get in touch.</h2>
+                    <p class="text-slate-600 text-sm mt-1">For inquiries, collaborations, or professional consulting requests.</p>
+                </div>
+                <a href="mailto:contact@syntonal.com" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-brand-dark hover:bg-slate-800 transition shadow-sm">
+                    contact@syntonal.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 text-slate-400 text-xs py-8">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <span>&copy; 2026 Syntonal. All rights reserved.</span>
+            <span>Built via GitHub Pages</span>
+        </div>
+    </footer>
+
+</body>
+</html>
